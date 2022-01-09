@@ -1,0 +1,2 @@
+2.0
+javascript는 body 맨 마지막 부분에 붙여넣는다.
