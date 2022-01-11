@@ -1,0 +1,32 @@
+Q1. 2 and 2.2 are both integers.
+No
+
+Q2. What is data type of "2"?
+string
+
+Q3. 'hello' is the same as "hello"
+yes
+
+Q4. A vaiable can only hold number values.
+No
+
+Q5. After creation, we can change the value of the const.
+No
+
+Q6. After creation, we can change the value of the let.
+yes
+
+Q7. "true" is a boolean value.
+no. ture is a boolean value.
+
+Q8. null and undefined are the same type.
+No
+
+Q9. Why do we use an array for?
+To organize values on a list.
+
+Q10. How can I get the second element of an array?
+arr[1]
+
+Q11. How can I access the name property of an object player?
+player["name"]

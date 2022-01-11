@@ -1,2 +1,43 @@
 2.0
 javascript는 body 맨 마지막 부분에 붙여넣는다.
+
+2.2
+javascript에서 variable을 만드는 법 = const variable = value;
+
+2.3
+const = constant로 값이 바뀔수 없음
+let = 새로운 걸 만드는 것, 따라서 값이 바뀔 수 있음
+원래는 둘다 var이였다. var은 언제 어디서든 업데이트 시킬 수 있다. 하지만 쓰지 말것. 너무 옛날 것.
+
+const a = 5;
+const b = 2;
+let myName = "nico";
+
+console.log(a + b);
+console.log(a * b);
+console.log(a / b);
+myName = "Nicolas"
+console.log("my name" + " " + myName);
+
+javascript도 위에서 아래로 실행된다.
+
+2.4
+boolean은 true, false이다.
+null은 아무것도 없음을 의미한다. false랑 다르다. 또한 아무것도 없는거지 정의가 안된것은 아니다.
+
+2.5
+array는 파이썬 리스트랑 같다. 불러내는 방법도 같다.
+array에 추가는 append 대신 push를 사용하면 된다.
+
+2.6
+ object는 딕셔너리랑 비슷하게 생겼다.
+ const player = {
+     name : "nico",
+     points : 10,
+     fat: true,
+ }
+
+ 단, 불러오는건 다르다.
+ console.log(player.name); 또는 console.log(player["name"]);
+ player.fat = false;로 바꾸는건 가능하다. 만약 player을 바꿀려고 하는거면 문제가 되겠지만 그 안의 것을 바꾸는건 문제가 되지 않는다.
+ 따라서 player.lastName = "Lee";와 같이 추가하고 없애는것도 문제없다.
