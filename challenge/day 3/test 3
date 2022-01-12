@@ -1,0 +1,61 @@
+Q1. Why do we use function?
+To encapsulate a piece of code.
+
+Q2. How can we 'run' a function?
+We write nameOfFunc + (): nameOfFunc()
+
+Q3. Why do we use 'arguments' on functions?
+To send a value to a function
+
+Q4. Functions can recieve maximum 3 arguments.
+No. Limitless
+
+Q5. Functions always have to recieve arguments.
+No.
+
+Q6. Why do we use 'return' on functions?
+To get a value from a function
+
+Q7. 'return' is the same as 'console.log'.
+No.
+
+Q8. What is the return value of parseInt("2")?
+2
+
+Q9. What is the return value of parseInt("hello")?
+NaN
+
+Q10. What is "NaN"?
+Not a Number.
+
+Q11. With this code
+if(false){
+    console.log("hi")
+}else{
+    console.log("bye")
+}
+what will be printed on the console?
+bye
+
+Q12. With this code
+if(8 > 10){
+    console.log("hi")
+}else if(8 < 10){
+    console.log("hello")
+} else {
+    console.log("bye")
+}
+what will be printed on the console?
+hello
+
+Q13. 8 > 5 && 10 > 20 will be?
+false
+
+Q14. 5 > 2 || 10 < 23 will be?
+true
+
+Q15. false && true will be?
+false
+
+Q16. true || false will be?
+true

@@ -41,3 +41,91 @@ array에 추가는 append 대신 push를 사용하면 된다.
  console.log(player.name); 또는 console.log(player["name"]);
  player.fat = false;로 바꾸는건 가능하다. 만약 player을 바꿀려고 하는거면 문제가 되겠지만 그 안의 것을 바꾸는건 문제가 되지 않는다.
  따라서 player.lastName = "Lee";와 같이 추가하고 없애는것도 문제없다.
+
+ 2.7
+ function을 만드는 법
+ function은 계속해서 사용할 수 있는 코드이다.
+ 말그대로 function으로 시작하면 된다.
+
+function sayHello() {
+    console.log("Hello!");
+}
+
+sayHello()
+
+2.8
+안에 변수를 넣고 싶을때는 argument를 작성한다.
+function sayHello(argument) {
+
+}
+
+function sayHello(nameOfPerson, age) {
+    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
+}
+
+sayHello("nico", 25);
+
+
+function plus(a,b) {
+    console.log(a + b);
+}
+
+plus(1,2)
+
+const player = {
+    name : "nico",
+    sayHello: function (otherPersonsName) {
+        console.log("hello! " + otherPersonsName );
+    },
+ }
+
+ console.log(player.name);
+ player.sayHello("aaa");
+
+
+2.11
+const age = 96;
+function calculateKrAge(ageOfForeigner) {
+    return ageOfForeigner + 2;
+}
+
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
+
+쉽게 생각하면 console.log() == print()
+return == return
+
+2.13
+conditionals = 조건문
+prompt() -> 사용자에게 보여준다. 아마 input같은거 인듯.
+const age = prompt("How old are you");
+console.log(age)
+prompt를 사용해서 123을 보내도 타입은 스트링이다.
+
+typeof는 type()과 같지만  typeof value 처럼 쓰는게 보통이다.
+
+parseInt("15") Str->Int 그렇다고 "ㅣㅓㅣㅏㅓㅣㅓ"이런걸 int로 바꿔주지는 못한다.
+
+2.14
+if
+
+const age = parseInt(prompt("How old are you"));
+console.log(isNaN(age));
+
+
+if(condition){
+    ///// condition === ture
+} else {
+    /// condition === false
+}
+condition은 boolean이여야 한다.
+
+2.15
+if
+else if
+else if
+...
+else
+
+&&==and ||==or
