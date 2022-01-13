@@ -129,3 +129,66 @@ else if
 else
 
 &&==and ||==or
+
+3.0
+브라우저 콘솔에 document를 사용하면 html에 접근할 수 있다.
+읽는거뿐만 아니라 변경도 가능하다.
+
+3.1
+console
+document.getElementById("title")
+
+js file
+const title = document.getElementById("title");
+console.dir(title);
+dir은 tag의 내부를 보여준다.
+
+3.2
+const hellos = document.getElemntByClassName("hello");
+console.log(hellos);
+
+querySelector
+css 내부를 선택할 수 있게한다.
+const title = document.querySelector(".hello h1:first-child")
+만약 겹치는게 있으면 제일 먼저꺼가 나온다. 그럴때는 querySelectorAll을 사용한다.
+
+3.3
+title.style.color = 'blue'
+javascript에서 css에 접근할 수 있다.
+
+click event
+function handleTitleClick() {
+    console.log("title was clicked!");
+}
+title.addEventListener("click", handleTitleClick);
+
+3.4
+property 이름 앞에 on이 있으면 event이다.
+
+const title = document.getElementById("title");
+function handleTitleClick() {
+    title.style.color = "blue"
+}
+function handleMouseEnter() {
+    title.innerText = "Here is mouse";
+}
+function handleMouseLeave() {
+    title.innerText = "Mouse is gone"
+}
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
+
+3.5
+// title.addEventListener("click", handleTitleClick);
+title.onclick = handleTitleClick;
+// title.addEventListener("mouseenter", handleMouseEnter);
+title.onmouseenter = handleMouseEnter;
+
+window의 변경에 따라 변할수도 있다.
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato"
+}
+window.addEventListener("resize", handleWindowResize)
+
+document는 body title head에만 가능하다.
