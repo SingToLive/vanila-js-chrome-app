@@ -1,26 +1,7 @@
-const title = document.getElementById("title");
+const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-    title.style.color = "blue"
+    h1.classList.toggle("clicked");
 }
 
-function handleMouseEnter() {
-    title.innerText = "Here is mouse";
-}
-
-function handleMouseLeave() {
-    title.innerText = "Mouse is gone"
-}
-
-
-// title.addEventListener("click", handleTitleClick);
-title.onclick = handleTitleClick;
-// title.addEventListener("mouseenter", handleMouseEnter);
-title.onmouseenter = handleMouseEnter;
-title.addEventListener("mouseleave", handleMouseLeave)
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato"
-}
-
-window.addEventListener("resize", handleWindowResize)
+h1.addEventListener("click", handleTitleClick);

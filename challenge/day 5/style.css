@@ -1,0 +1,20 @@
+body {
+    background-color: aqua;
+  }
+  
+  .Small {
+    background-color: blueviolet;
+  }
+  
+  .MoreSmall {
+    background-color: chocolate;
+  }
+  
+  .Origin {
+    background-color: aqua;
+  }
+  
+  #size {
+    color: white;
+  }
+  

@@ -192,3 +192,143 @@ function handleWindowResize() {
 window.addEventListener("resize", handleWindowResize)
 
 document는 body title head에만 가능하다.
+
+3.6
+const title = document.getElementById("title");
+
+function handleTitleClick() {
+    if(title.style.color === "blue") {
+        title.style.color = "tomato";
+    } else {
+        title.style.color="blue";
+    }
+}
+
+title.addEventListener("click", handleTitleClick);
+
+
+const title = document.getElementById("title");
+
+function handleTitleClick() {
+    const currentColor = title.style.color;
+    let newColor;
+    if(currentColor === "blue") {
+        newColor = "tomato";
+    } else {
+        newColor="blue";
+    }
+    title.style.color = newColor;
+}
+
+title.addEventListener("click", handleTitleClick);
+
+
+3.7
+js
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+    const clickedClass = "clicked"
+    if(h1.className === clickedClass) {
+        h1.className = "";
+    } else {
+        h1.className = clickedClass;
+    }
+}
+
+h1.addEventListener("click", handleTitleClick);
+
+html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Momentum</title>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Grap me!</h1>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+css
+body {
+  background-color: beige;
+}
+
+h1 {
+  color: cornflowerblue;
+  transition: color .5s ease-in-out;
+}
+
+.clicked {
+  color: tomato;
+}
+
+하지만 이경우 h1에 class="sexy-font"가 있으면 사라진다.
+디버깅 하는것을 배워보자. 물론 다음장에서.
+
+3.8
+js
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+    const clickedClass = "clicked"
+    if(h1.classList.contains(clickedClass)) {
+        h1.classList.remove(clickedClass);
+    } else {
+        h1.classList.add(clickedClass);
+    }
+}
+
+h1.addEventListener("click", handleTitleClick);
+
+html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Momentum</title>
+  </head>
+  <body>
+    <div class="hello">
+      <h1 class="sexy-font">Grap me!</h1>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+css
+body {
+  background-color: beige;
+}
+
+h1 {
+  color: cornflowerblue;
+  transition: color .5s ease-in-out;
+}
+
+.clicked {
+  color: tomato;
+}
+
+.sexy-font {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+js기능 toggle
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+    h1.classList.toggle("clicked");
+}
+
+h1.addEventListener("click", handleTitleClick);
