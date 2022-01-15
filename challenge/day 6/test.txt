@@ -1,0 +1,38 @@
+Q1. From JS we can get elements from the HTML
+Yes
+
+Q2. What object do we use to access HTML from JS?
+document
+
+Q3. How can I find the #title with JS?
+document.getElementById("title")
+
+Q4. How can I find all the .button with JS?
+document.getElementsByClassName("button")
+
+Q5. How can I find all the <a>?
+document.getElementsByTagName("a")
+
+Q6. How can I find all the .home h1:first-child?
+document.querySelectorAll(".home h1:first-child")
+
+Q7. How can I find the first .home h1:first-child?
+document.querySelector(".home h1:first-child")
+
+Q8. We can change the CSS of an elements from JS?
+Yes
+
+Q9. Will this work? btn.addEventListener("click", handler())
+No
+
+Q10. Will this work? btn.addEventListener("click", handler)
+Yes
+
+Q11. document and window are the same.
+No
+
+Q12. What is difference between using className and classList
+className replaces all classes, classList doesn't
+
+Q13. What does classList.toggle do?
+It adds a class if it does not exist and removes a class that exists
